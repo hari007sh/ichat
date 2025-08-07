@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ভারতচ্যাট</string>
+    <string name="no_chats">এখনও কোনো চ্যাট নেই</string>
+    <string name="type_message">বার্তা লিখুন</string>
+    <string name="send">পাঠান</string>
+</resources>

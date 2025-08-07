@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">பாரத்‌சாட்</string>
+    <string name="no_chats">இன்னும் உரையாடல்கள் இல்லை</string>
+    <string name="type_message">செய்தியை தட்டச்சு செய்யவும்</string>
+    <string name="send">அனுப்பு</string>
+</resources>
