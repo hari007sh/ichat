@@ -1,0 +1,7 @@
+realtime:
+  replicaCount: 3
+  image: ghcr.io/your-org/realtime
+  tag: 1.0.0
+  resources:
+    limits: { cpu: "4000m", memory: "8Gi" }
+    requests: { cpu: "2000m", memory: "4Gi" }

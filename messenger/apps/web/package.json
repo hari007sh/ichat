@@ -1,0 +1,3 @@
+{ "name": "messenger-web", "version": "1.0.0",
+  "dependencies": { "next": "14.2.5", "react": "18.3.1",
+                    "@signalapp/libsignal-client": "0.54.0" } }

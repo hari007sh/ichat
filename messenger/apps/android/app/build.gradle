@@ -1,0 +1,7 @@
+plugins { id 'com.android.application' version '8.4.0' }
+android { compileSdk 34 }
+dependencies {
+    implementation 'org.signal:libsignal-client:0.54.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
+}

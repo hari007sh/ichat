@@ -1,0 +1,2 @@
+plugins { id 'org.springframework.boot' version '3.2.4' }
+dependencies { implementation 'com.npci:upi-sdk-java:2.0.0' }

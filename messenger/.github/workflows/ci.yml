@@ -1,0 +1,12 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+    - uses: erlef/setup-beam@v1
+      with: { otp-version: 27, elixir-version: 1.17 }
+    - run: mix deps.get && mix test
+    - run: docker build -t ghcr.io/your-org/realtime:${{ github.sha }} services/realtime
+    - run: docker push ghcr.io/your-org/realtime:${{ github.sha }}
