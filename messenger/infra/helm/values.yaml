@@ -1,0 +1,11 @@
+realtime:
+  replicaCount: 3
+  resources:
+    limits: { cpu: "4000m", memory: "8Gi" }
+    requests: { cpu: "2000m", memory: "4Gi" }
+  nodeSelector: { workload: realtime }
+  tolerations:
+  - key: realtime
+    operator: Equal
+    value: "true"
+    effect: NoSchedule

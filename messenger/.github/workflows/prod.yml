@@ -1,0 +1,24 @@
+name: prod
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    strategy:
+      matrix:
+        service: [realtime, auth, media, payment, feed]
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build & push
+      run: |
+        docker build -t ghcr.io/your-org/${{ matrix.service }}:${{ github.sha }} services/${{ matrix.service }}
+        docker push ghcr.io/your-org/${{ matrix.service }}:${{ github.sha }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+    - run: terraform plan -out=tfplan
+    - run: terraform apply tfplan
+    - run: helmfile sync
+    - run: argocd app sync messenger
